@@ -31,11 +31,89 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <nav
+        class="navbar navbar-expand-lg bg-dark shadow-lg"
+        data-bs-theme="dark"
+      >
         <div class="container">
           <a href="#home" class="navbar-brand"> Rajeshwaran </a>
+          <button
+            class="navbar-toggler shadow-none border border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navcanvas"
+            aria-controls="navcanvas"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-start bg-dark sidebar"
+            tabindex="-1"
+            id="navcanvas"
+            aria-labelledby="navcanvaslabel"
+          >
+            <div class="offcanvas-header">
+              <div
+                class="offcanvas-title text-white fw-bolder fs-3"
+                id="navcanvaslabel"
+              >
+                Rajeshwaran
+              </div>
+              <button
+                type="button"
+                class="btn-close shadow-none border-0"
+                data-bs-theme="dark"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav fs-5 justify-content-end flex-grow-1 mx-4">
+                <li class="nav-item">
+                  <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#getintouch" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
+    <section class="hero" id="home">
+      <div class="container">
+        <div
+          class="hero-content animate__animate animate__fadeInUp animate__delay-2s"
+        >
+          <h1>Transform Your Images with Professional Retouching</h1>
+          <p class="my-4">
+            Elevate your visual content with expert photo retouching services
+            tailored to your specific needs. From portrait enhancement to
+            product photography, we deliver pixel-perfect results.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a
+              href="#portfolio"
+              class="btn btn-primary btn-md rounded-pill animate__animated animate__bounceIn animate__delay-1s"
+            >
+              View Portfolio</a
+            >
+            <a
+              href="#getintouch"
+              class="btn btn-outline-light border-3 rounded-pill btn-md animate__animated animate__bounceIn animate__delay-1s"
+              >Get In Touch</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

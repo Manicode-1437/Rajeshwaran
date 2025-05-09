@@ -12,6 +12,8 @@
   --bs-secondary-rgb: 57, 62, 70;
   --bs-light: #eeeeee;
   --bs-light-rgb: 238, 238, 238;
+  --bs-red: #d84040;
+  --bs-red-rgb: 216, 64, 64;
 }
 
 body {
@@ -33,5 +35,82 @@ h6 {
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--bs-dark);
+  color: var(--bs-light);
 }
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--bs-red);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #008b91;
+  border-color: #008b91;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 173, 181, 0.3);
+}
+
+.btn-outline-light {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(238, 238, 238, 0.3);
+}
+
+.hero {
+  height: 92.7vh;
+  background: url(../assets/images/heroimge.jpg) center/cover no-repeat,
+    linear-gradient(rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.7));
+  display: flex;
+  align-items: center;
+  color: var(--bs-light);
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+/* #home {
+  height: 93vh;
+  background: url(../assets/images/heroimg1.jpg) no-repeat;
+  background-size: contain;
+  width: 100%;
+  border: 2px solid black;
+} */
