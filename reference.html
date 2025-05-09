@@ -4,145 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PixelPerfect Retouching | Professional Photo Retoucher</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Animate.css -->
+    <!-- Animate.css CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <!-- Font Awesome -->
+    <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
     />
     <style>
+      /* Base Styles */
       :root {
-        --bs-primary: #00adb5;
-        --bs-primary-rgb: 0, 173, 181;
-        --bs-dark: #222831;
-        --bs-dark-rgb: 34, 40, 49;
-        --bs-secondary: #393e46;
-        --bs-secondary-rgb: 57, 62, 70;
-        --bs-light: #eeeeee;
-        --bs-light-rgb: 238, 238, 238;
+        --primary-color: #222831;
+        --secondary-color: #393e46;
+        --accent-color: #00adb5;
+        --light-color: #eeeeee;
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
       body {
         font-family: "Montserrat", sans-serif;
-        color: var(--bs-dark);
+        line-height: 1.6;
+        color: var(--primary-color);
+        background-color: #f8f9fa;
         overflow-x: hidden;
       }
 
       h1,
       h2,
       h3,
-      h4,
-      h5,
-      h6 {
+      h4 {
         font-family: "Playfair Display", serif;
+        margin-bottom: 1rem;
       }
 
-      /* Custom Button Styles */
-      .btn-primary {
-        background-color: var(--bs-primary);
-        border-color: var(--bs-primary);
-        transition: all 0.3s ease;
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition);
       }
 
-      .btn-primary:hover {
+      ul {
+        list-style: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.8rem 2rem;
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: var(--transition);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+      }
+
+      .btn:hover {
         background-color: #008b91;
-        border-color: #008b91;
         transform: translateY(-2px);
         box-shadow: 0 4px 10px rgba(0, 173, 181, 0.3);
       }
 
-      .btn-outline-light {
-        transition: all 0.3s ease;
-      }
-
-      .btn-outline-light:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 10px rgba(238, 238, 238, 0.3);
-      }
-
-      /* Navbar Styles */
-      .navbar {
-        transition: all 0.3s ease;
-        padding: 1rem 0;
-      }
-
-      .navbar.scrolled {
-        padding: 0.5rem 0;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .navbar-brand {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--bs-dark);
-      }
-
-      .navbar-brand span {
-        color: var(--bs-primary);
-      }
-
-      .nav-link {
-        position: relative;
-        font-weight: 500;
-      }
-
-      .nav-link::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--bs-primary);
-        transition: all 0.3s ease;
-      }
-
-      .nav-link:hover::after {
-        width: 100%;
-      }
-
-      /* Hero Section */
-      .hero {
-        height: 100vh;
-        background: linear-gradient(
-            rgba(34, 40, 49, 0.7),
-            rgba(34, 40, 49, 0.7)
-          ),
-          url("/api/placeholder/1920/1080") center/cover no-repeat;
-        display: flex;
-        align-items: center;
-        color: var(--bs-light);
-      }
-
-      .hero-content {
-        max-width: 800px;
-      }
-
-      .hero-content h1 {
-        font-size: 3.5rem;
-        line-height: 1.2;
-      }
-
-      .hero-content p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-      }
-
-      /* Section Styles */
       section {
         padding: 5rem 0;
       }
@@ -167,10 +119,153 @@
         transform: translateX(-50%);
         width: 80px;
         height: 3px;
-        background-color: var(--bs-primary);
+        background-color: var(--accent-color);
+      }
+
+      /* Header */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 0;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+      }
+
+      .logo span {
+        color: var(--accent-color);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links li a {
+        font-weight: 500;
+        position: relative;
+      }
+
+      .nav-links li a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--accent-color);
+        transition: var(--transition);
+      }
+
+      .nav-links li a:hover::after {
+        width: 100%;
+      }
+
+      .mobile-nav-toggle {
+        display: none;
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--primary-color);
+      }
+
+      /* Hero Section */
+      .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background-color: var(--secondary-color);
+      }
+
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            rgba(34, 40, 49, 0.7),
+            rgba(34, 40, 49, 0.7)
+          ),
+          url("/api/placeholder/1920/1080") center/cover no-repeat;
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        color: var(--light-color);
+        max-width: 800px;
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      .hero-cta {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 2px solid var(--light-color);
+        color: var(--light-color);
+      }
+
+      .btn-outline:hover {
+        background-color: var(--light-color);
+        color: var(--primary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(238, 238, 238, 0.3);
       }
 
       /* About Section */
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .about-text h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .about-text p {
+        margin-bottom: 1.5rem;
+        color: #666;
+      }
+
       .about-image {
         border-radius: 8px;
         overflow: hidden;
@@ -179,15 +274,21 @@
 
       /* Services Section */
       .services {
-        background-color: #f8f9fa;
+        background-color: #f1f1f1;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
       }
 
       .service-card {
+        background-color: white;
         border-radius: 8px;
         overflow: hidden;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: all 0.3s ease;
-        height: 100%;
+        transition: var(--transition);
       }
 
       .service-card:hover {
@@ -204,43 +305,62 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: all 0.3s ease;
+        transition: var(--transition);
       }
 
       .service-card:hover .service-image img {
         transform: scale(1.1);
       }
 
+      .service-content {
+        padding: 1.5rem;
+      }
+
+      .service-content h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .service-content p {
+        color: #666;
+        margin-bottom: 1rem;
+      }
+
       /* Portfolio Section */
       .portfolio-filter {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
+        gap: 1rem;
         margin-bottom: 2rem;
+        flex-wrap: wrap;
       }
 
       .filter-btn {
         padding: 0.5rem 1.5rem;
-        border: 1px solid var(--bs-primary);
-        color: var(--bs-primary);
         background-color: transparent;
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
         cursor: pointer;
         border-radius: 30px;
-        transition: all 0.3s ease;
+        transition: var(--transition);
       }
 
       .filter-btn.active,
       .filter-btn:hover {
-        background-color: var(--bs-primary);
+        background-color: var(--accent-color);
         color: white;
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
       }
 
       .portfolio-item {
         border-radius: 8px;
         overflow: hidden;
         position: relative;
-        margin-bottom: 1.5rem;
         height: 300px;
       }
 
@@ -248,7 +368,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: all 0.3s ease;
+        transition: var(--transition);
       }
 
       .portfolio-overlay {
@@ -263,7 +383,7 @@
         justify-content: center;
         align-items: center;
         opacity: 0;
-        transition: all 0.3s ease;
+        transition: var(--transition);
         padding: 1rem;
         text-align: center;
         color: white;
@@ -275,6 +395,11 @@
 
       .portfolio-item:hover .portfolio-image {
         transform: scale(1.1);
+      }
+
+      .portfolio-overlay h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
       }
 
       .portfolio-buttons {
@@ -291,19 +416,24 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--bs-primary);
+        color: var(--accent-color);
         font-size: 1.2rem;
-        transition: all 0.3s ease;
+        transition: var(--transition);
       }
 
       .portfolio-btn:hover {
-        background-color: var(--bs-dark);
+        background-color: var(--primary-color);
         color: white;
       }
 
       /* Testimonials Section */
       .testimonials {
-        background-color: #f8f9fa;
+        background-color: #f1f1f1;
+      }
+
+      .testimonial-container {
+        max-width: 800px;
+        margin: 0 auto;
       }
 
       .testimonial-card {
@@ -312,6 +442,11 @@
         padding: 2rem;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .testimonial-card:last-child {
+        margin-bottom: 0;
       }
 
       .client-image {
@@ -320,7 +455,7 @@
         border-radius: 50%;
         overflow: hidden;
         margin: 0 auto 1rem;
-        border: 3px solid var(--bs-primary);
+        border: 3px solid var(--accent-color);
       }
 
       .client-image img {
@@ -337,20 +472,45 @@
 
       .client-name {
         font-weight: 600;
-        color: var(--bs-dark);
-        margin-bottom: 0;
+        color: var(--primary-color);
       }
 
       .client-role {
         font-size: 0.9rem;
-        color: var(--bs-primary);
+        color: var(--accent-color);
       }
 
       /* Contact Section */
-      .contact-icon {
+      .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+
+      .contact-info h3 {
         font-size: 1.5rem;
-        color: var(--bs-primary);
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-details {
+        margin-bottom: 2rem;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-icon {
         margin-right: 1rem;
+        font-size: 1.5rem;
+        color: var(--accent-color);
+      }
+
+      .contact-text h4 {
+        margin-bottom: 0.2rem;
+        font-size: 1.1rem;
       }
 
       .social-links {
@@ -362,17 +522,17 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: var(--bs-primary);
+        background-color: var(--accent-color);
         display: flex;
         justify-content: center;
         align-items: center;
         color: white;
         font-size: 1.2rem;
-        transition: all 0.3s ease;
+        transition: var(--transition);
       }
 
       .social-link:hover {
-        background-color: var(--bs-dark);
+        background-color: var(--primary-color);
         transform: translateY(-5px);
       }
 
@@ -383,47 +543,68 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       }
 
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: var(--transition);
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 2px rgba(0, 173, 181, 0.2);
+      }
+
+      textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+      }
+
       /* Footer */
       footer {
-        background-color: var(--bs-dark);
-        color: var(--bs-light);
+        background-color: var(--primary-color);
+        color: var(--light-color);
         padding: 3rem 0 1rem;
       }
 
-      .footer-title {
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-column h3 {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
         position: relative;
         padding-bottom: 0.5rem;
       }
 
-      .footer-title::after {
+      .footer-column h3::after {
         content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         width: 50px;
         height: 2px;
-        background-color: var(--bs-primary);
-      }
-
-      .footer-links {
-        list-style: none;
-        padding-left: 0;
+        background-color: var(--accent-color);
       }
 
       .footer-links li {
         margin-bottom: 0.8rem;
       }
 
-      .footer-links a {
-        color: var(--bs-light);
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-
-      .footer-links a:hover {
-        color: var(--bs-primary);
+      .footer-links li a:hover {
+        color: var(--accent-color);
         padding-left: 5px;
       }
 
@@ -435,7 +616,7 @@
 
       .footer-contact-icon {
         margin-right: 1rem;
-        color: var(--bs-primary);
+        color: var(--accent-color);
       }
 
       .footer-bottom {
@@ -446,103 +627,173 @@
         opacity: 0.7;
       }
 
-      /* Animation trigger class */
-      .invisible {
-        opacity: 0;
-        visibility: hidden;
+      /* Media Queries */
+      @media (max-width: 991px) {
+        .about-content,
+        .contact-content {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-content h1 {
+          font-size: 3rem;
+        }
+
+        .hero-content p {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .mobile-nav-toggle {
+          display: block;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -300px;
+          width: 300px;
+          height: 100vh;
+          background-color: white;
+          flex-direction: column;
+          padding: 5rem 2rem;
+          box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+          transition: var(--transition);
+          z-index: 999;
+        }
+
+        .nav-links.active {
+          right: 0;
+        }
+
+        .nav-close {
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          background: none;
+          border: none;
+          font-size: 1.5rem;
+          cursor: pointer;
+          color: var(--primary-color);
+        }
+
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-content p {
+          font-size: 1rem;
+        }
+
+        .hero-cta {
+          flex-direction: column;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .btn {
+          padding: 0.7rem 1.5rem;
+          font-size: 0.8rem;
+        }
+
+        .section-title h2 {
+          font-size: 1.8rem;
+        }
       }
     </style>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <!-- Header -->
+    <header>
       <div class="container">
-        <a class="navbar-brand animate__animated animate__fadeIn" href="#home"
-          >Pixel<span>Perfect</span></a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link animate__animated animate__fadeIn" href="#home"
-                >Home</a
-              >
+        <div class="header-content">
+          <a href="#" class="logo animate__animated animate__fadeIn"
+            >Pixel<span>Perfect</span></a
+          >
+          <button class="mobile-nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <button class="nav-close">
+              <i class="fas fa-times"></i>
+            </button>
+            <li>
+              <a href="#home" class="animate__animated animate__fadeIn">Home</a>
             </li>
-            <li class="nav-item">
+            <li>
               <a
-                class="nav-link animate__animated animate__fadeIn"
-                style="animation-delay: 0.1s"
                 href="#about"
+                class="animate__animated animate__fadeIn"
+                style="animation-delay: 0.1s"
                 >About</a
               >
             </li>
-            <li class="nav-item">
+            <li>
               <a
-                class="nav-link animate__animated animate__fadeIn"
-                style="animation-delay: 0.2s"
                 href="#services"
+                class="animate__animated animate__fadeIn"
+                style="animation-delay: 0.2s"
                 >Services</a
               >
             </li>
-            <li class="nav-item">
+            <li>
               <a
-                class="nav-link animate__animated animate__fadeIn"
-                style="animation-delay: 0.3s"
                 href="#portfolio"
+                class="animate__animated animate__fadeIn"
+                style="animation-delay: 0.3s"
                 >Portfolio</a
               >
             </li>
-            <li class="nav-item">
+            <li>
               <a
-                class="nav-link animate__animated animate__fadeIn"
-                style="animation-delay: 0.4s"
                 href="#testimonials"
+                class="animate__animated animate__fadeIn"
+                style="animation-delay: 0.4s"
                 >Testimonials</a
               >
             </li>
-            <li class="nav-item">
+            <li>
               <a
-                class="nav-link animate__animated animate__fadeIn"
-                style="animation-delay: 0.5s"
                 href="#contact"
+                class="animate__animated animate__fadeIn"
+                style="animation-delay: 0.5s"
                 >Contact</a
               >
             </li>
           </ul>
         </div>
       </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+      <div class="hero-bg"></div>
       <div class="container">
         <div class="hero-content animate__animated animate__fadeInUp">
           <h1>Transform Your Images with Professional Retouching</h1>
-          <p class="my-4">
+          <p>
             Elevate your visual content with expert photo retouching services
             tailored to your specific needs. From portrait enhancement to
             product photography, we deliver pixel-perfect results.
           </p>
-          <div class="d-flex flex-wrap gap-3">
+          <div class="hero-cta">
             <a
               href="#portfolio"
-              class="btn btn-primary btn-lg animate__animated animate__fadeInUp"
+              class="btn animate__animated animate__fadeInUp"
               style="animation-delay: 0.3s"
               >View Portfolio</a
             >
             <a
               href="#contact"
-              class="btn btn-outline-light btn-lg animate__animated animate__fadeInUp"
+              class="btn btn-outline animate__animated animate__fadeInUp"
               style="animation-delay: 0.5s"
               >Get in Touch</a
             >
@@ -551,146 +802,352 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
       <div class="container">
         <div class="section-title">
-          <h2 class="animate__animated animate__fadeIn reveal">About Us</h2>
+          <h2 class="animate__animated animate__fadeIn">Client Testimonials</h2>
         </div>
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <div
-              class="about-text invisible animate__animated animate__fadeInLeft"
-            >
-              <h2>Professional Image Enhancement That Makes a Difference</h2>
-              <p class="text-muted mb-3">
-                At PixelPerfect, we believe in the power of visual storytelling.
-                Our expert retouching team combines technical precision with
-                artistic vision to transform ordinary images into extraordinary
-                visual assets.
-              </p>
-              <p class="text-muted mb-3">
-                With over a decade of experience in the industry, we've helped
-                brands, photographers, and individuals achieve their visual
-                goals through meticulous attention to detail and an
-                understanding of what makes images truly impactful.
-              </p>
-              <p class="text-muted mb-4">
-                Whether you need subtle enhancements or complete
-                transformations, our tailored approach ensures your images
-                communicate exactly what you intend them to, with technical
-                excellence and creative integrity.
-              </p>
-              <a href="#services" class="btn btn-primary">Our Services</a>
+        <div class="testimonial-container">
+          <div class="testimonial-card animate__animated animate__fadeInUp">
+            <div class="client-image">
+              <img src="/api/placeholder/150/150" alt="Client Portrait" />
+            </div>
+            <p class="testimonial-text">
+              "The attention to detail is remarkable. PixelPerfect transformed
+              our product photography and helped increase our online sales by
+              30%. Their understanding of what makes an image sell is
+              unmatched."
+            </p>
+            <h4 class="client-name">Sarah Johnson</h4>
+            <p class="client-role">Marketing Director, StyleBrand</p>
+          </div>
+          <div
+            class="testimonial-card animate__animated animate__fadeInUp"
+            style="animation-delay: 0.3s"
+          >
+            <div class="client-image">
+              <img src="/api/placeholder/150/150" alt="Client Portrait" />
+            </div>
+            <p class="testimonial-text">
+              "As a professional photographer, I'm extremely particular about
+              who touches my work. The team at PixelPerfect understands my
+              aesthetic and enhances my photos while maintaining my signature
+              style. Couldn't recommend them more!"
+            </p>
+            <h4 class="client-name">Michael Torres</h4>
+            <p class="client-role">Fashion Photographer</p>
+          </div>
+          <div
+            class="testimonial-card animate__animated animate__fadeInUp"
+            style="animation-delay: 0.6s"
+          >
+            <div class="client-image">
+              <img src="/api/placeholder/150/150" alt="Client Portrait" />
+            </div>
+            <p class="testimonial-text">
+              "Our real estate listings look absolutely stunning after
+              PixelPerfect's enhancement. The sky replacements and interior
+              touch-ups make every property look its best, helping us close
+              deals faster."
+            </p>
+            <h4 class="client-name">Emily Roberts</h4>
+            <p class="client-role">Real Estate Agent, Luxury Homes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="animate__animated animate__fadeIn">Get In Touch</h2>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info animate__animated animate__fadeInLeft">
+            <h3>Let's Discuss Your Project</h3>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Address</h4>
+                  <p>123 Creative Studio St, Design District, NY 10001</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Phone</h4>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Email</h4>
+                  <p>info@pixelperfectretouching.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Working Hours</h4>
+                  <p>Monday - Friday: 9am - 6pm</p>
+                </div>
+              </div>
+            </div>
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a
+                href="#"
+                class="social-link animate__animated animate__bounceIn"
+                style="animation-delay: 0.1s"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link animate__animated animate__bounceIn"
+                style="animation-delay: 0.2s"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link animate__animated animate__bounceIn"
+                style="animation-delay: 0.3s"
+              >
+                <i class="fab fa-behance"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link animate__animated animate__bounceIn"
+                style="animation-delay: 0.4s"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div
-              class="about-image invisible animate__animated animate__fadeInRight"
-            >
-              <img
-                src="/api/placeholder/600/400"
-                alt="About PixelPerfect Retouching"
-                class="img-fluid rounded"
-              />
+          <div class="contact-form animate__animated animate__fadeInRight">
+            <form id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject" />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>PixelPerfect</h3>
+            <p>
+              Professional photo retouching services tailored to your specific
+              needs. We transform ordinary images into extraordinary visual
+              assets with precision and creativity.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Our Services</h3>
+            <ul class="footer-links">
+              <li><a href="#">Portrait Retouching</a></li>
+              <li><a href="#">Product Enhancement</a></li>
+              <li><a href="#">Fashion & Beauty</a></li>
+              <li><a href="#">Real Estate Enhancement</a></li>
+              <li><a href="#">Color Correction</a></li>
+              <li><a href="#">Background Removal</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p>123 Creative Studio St, Design District, NY 10001</p>
             </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <p>info@pixelperfectretouching.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 PixelPerfect Retouching. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="animate__animated animate__fadeIn">About Us</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text animate__animated animate__fadeInLeft">
+            <h2>Professional Image Enhancement That Makes a Difference</h2>
+            <p>
+              At PixelPerfect, we believe in the power of visual storytelling.
+              Our expert retouching team combines technical precision with
+              artistic vision to transform ordinary images into extraordinary
+              visual assets.
+            </p>
+            <p>
+              With over a decade of experience in the industry, we've helped
+              brands, photographers, and individuals achieve their visual goals
+              through meticulous attention to detail and an understanding of
+              what makes images truly impactful.
+            </p>
+            <p>
+              Whether you need subtle enhancements or complete transformations,
+              our tailored approach ensures your images communicate exactly what
+              you intend them to, with technical excellence and creative
+              integrity.
+            </p>
+            <a href="#services" class="btn">Our Services</a>
+          </div>
+          <div class="about-image animate__animated animate__fadeInRight">
+            <img
+              src="/api/placeholder/600/400"
+              alt="About PixelPerfect Retouching"
+            />
           </div>
         </div>
       </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section class="services" id="services">
       <div class="container">
         <div class="section-title">
-          <h2 class="animate__animated animate__fadeIn reveal">Our Services</h2>
+          <h2 class="animate__animated animate__fadeIn">Our Services</h2>
         </div>
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-3">
-            <div
-              class="service-card invisible animate__animated animate__fadeInUp"
-            >
-              <div class="service-image">
-                <img
-                  src="/api/placeholder/400/300"
-                  alt="Portrait Retouching"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="card-body p-4">
-                <h3 class="h4 mb-3">Portrait Retouching</h3>
-                <p class="text-muted mb-3">
-                  Natural skin enhancement, blemish removal, and facial
-                  contouring while preserving the subject's authentic character.
-                </p>
-                <a href="#contact" class="btn btn-primary">Learn More</a>
-              </div>
+        <div class="services-grid">
+          <div class="service-card animate__animated animate__fadeInUp">
+            <div class="service-image">
+              <img src="/api/placeholder/400/300" alt="Portrait Retouching" />
+            </div>
+            <div class="service-content">
+              <h3>Portrait Retouching</h3>
+              <p>
+                Natural skin enhancement, blemish removal, and facial contouring
+                while preserving the subject's authentic character.
+              </p>
+              <a href="#contact" class="btn">Learn More</a>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div
-              class="service-card invisible animate__animated animate__fadeInUp"
-              style="animation-delay: 0.2s"
-            >
-              <div class="service-image">
-                <img
-                  src="/api/placeholder/400/300"
-                  alt="Product Photography Enhancement"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="card-body p-4">
-                <h3 class="h4 mb-3">Product Enhancement</h3>
-                <p class="text-muted mb-3">
-                  Color correction, background removal, and detail enhancement
-                  to showcase your products in their best light.
-                </p>
-                <a href="#contact" class="btn btn-primary">Learn More</a>
-              </div>
+          <div
+            class="service-card animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <div class="service-image">
+              <img
+                src="/api/placeholder/400/300"
+                alt="Product Photography Enhancement"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Product Enhancement</h3>
+              <p>
+                Color correction, background removal, and detail enhancement to
+                showcase your products in their best light.
+              </p>
+              <a href="#contact" class="btn">Learn More</a>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div
-              class="service-card invisible animate__animated animate__fadeInUp"
-              style="animation-delay: 0.4s"
-            >
-              <div class="service-image">
-                <img
-                  src="/api/placeholder/400/300"
-                  alt="Fashion & Beauty Retouching"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="card-body p-4">
-                <h3 class="h4 mb-3">Fashion & Beauty</h3>
-                <p class="text-muted mb-3">
-                  High-end retouching techniques for fashion and beauty
-                  photography that meet industry standards.
-                </p>
-                <a href="#contact" class="btn btn-primary">Learn More</a>
-              </div>
+          <div
+            class="service-card animate__animated animate__fadeInUp"
+            style="animation-delay: 0.4s"
+          >
+            <div class="service-image">
+              <img
+                src="/api/placeholder/400/300"
+                alt="Fashion & Beauty Retouching"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Fashion & Beauty</h3>
+              <p>
+                High-end retouching techniques for fashion and beauty
+                photography that meet industry standards.
+              </p>
+              <a href="#contact" class="btn">Learn More</a>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div
-              class="service-card invisible animate__animated animate__fadeInUp"
-              style="animation-delay: 0.6s"
-            >
-              <div class="service-image">
-                <img
-                  src="/api/placeholder/400/300"
-                  alt="Real Estate Photo Enhancement"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="card-body p-4">
-                <h3 class="h4 mb-3">Real Estate Enhancement</h3>
-                <p class="text-muted mb-3">
-                  Sky replacement, perspective correction, and color balancing
-                  to make properties look their absolute best.
-                </p>
-                <a href="#contact" class="btn btn-primary">Learn More</a>
-              </div>
+          <div
+            class="service-card animate__animated animate__fadeInUp"
+            style="animation-delay: 0.6s"
+          >
+            <div class="service-image">
+              <img
+                src="/api/placeholder/400/300"
+                alt="Real Estate Photo Enhancement"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Real Estate Enhancement</h3>
+              <p>
+                Sky replacement, perspective correction, and color balancing to
+                make properties look their absolute best.
+              </p>
+              <a href="#contact" class="btn">Learn More</a>
             </div>
           </div>
         </div>
@@ -698,16 +1155,12 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
         <div class="section-title">
-          <h2 class="animate__animated animate__fadeIn reveal">
-            Our Portfolio
-          </h2>
+          <h2 class="animate__animated animate__fadeIn">Our Portfolio</h2>
         </div>
-        <div
-          class="portfolio-filter invisible animate__animated animate__fadeIn"
-        >
+        <div class="portfolio-filter animate__animated animate__fadeIn">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="portrait">Portrait</button>
           <button class="filter-btn" data-filter="product">Product</button>
@@ -716,240 +1169,115 @@
             Real Estate
           </button>
         </div>
-        <div class="row portfolio-container">
+        <div class="portfolio-grid">
           <div
-            class="col-md-6 col-lg-4 portfolio-item invisible animate__animated animate__fadeInUp"
+            class="portfolio-item animate__animated animate__fadeInUp"
             data-category="portrait"
           >
-            <div class="position-relative h-100">
-              <img
-                src="/api/placeholder/400/400"
-                alt="Portrait Retouching Example"
-                class="portfolio-image img-fluid"
-              />
-              <div class="portfolio-overlay">
-                <h3>Natural Portrait Enhancement</h3>
-                <p>Before & after transformation with subtle skin retouching</p>
-                <div class="portfolio-buttons">
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-search"></i>
-                  </a>
-                </div>
+            <img
+              src="/api/placeholder/400/400"
+              alt="Portrait Retouching Example"
+              class="portfolio-image"
+            />
+            <div class="portfolio-overlay">
+              <h3>Natural Portrait Enhancement</h3>
+              <p>Before & after transformation with subtle skin retouching</p>
+              <div class="portfolio-buttons">
+                <a href="#" class="portfolio-btn">
+                  <i class="fas fa-link"></i>>
+                </a>
+                <a href="#" class="portfolio-btn">
+                  <i class="fas fa-search"></i>
+                </a>
               </div>
             </div>
           </div>
           <div
-            class="col-md-6 col-lg-4 portfolio-item invisible animate__animated animate__fadeInUp"
+            class="portfolio-item animate__animated animate__fadeInUp"
+            data-category="product"
             style="animation-delay: 0.2s"
-            data-category="product"
           >
-            <div class="position-relative h-100">
-              <img
-                src="/api/placeholder/400/400"
-                alt="Product Retouching Example"
-                class="portfolio-image img-fluid"
-              />
-              <div class="portfolio-overlay">
-                <h3>Product Photography</h3>
-                <p>Color correction and detail enhancement for e-commerce</p>
-                <div class="portfolio-buttons">
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-search"></i>
-                  </a>
-                </div>
+            <img
+              src="/api/placeholder/400/400"
+              alt="Product Retouching Example"
+              class="portfolio-image"
+            />
+            <div class="portfolio-overlay">
+              <h3>Product Photography</h3>
+              <p>Color correction and detail enhancement for e-commerce</p>
+              <div class="portfolio-buttons">
+                <a href="#" class="portfolio-btn">
+                  <i class="fas fa-link"></i>
+                </a>
+                <a href="#" class="portfolio-btn">
+                  <i class="fas fa-search"></i>
+                </a>
               </div>
             </div>
           </div>
           <div
-            class="col-md-6 col-lg-4 portfolio-item invisible animate__animated animate__fadeInUp"
-            style="animation-delay: 0.4s"
+            class="portfolio-item animate__animated animate__fadeInUp"
             data-category="fashion"
+            style="animation-delay: 0.4s"
           >
-            <div class="position-relative h-100">
-              <img
-                src="/api/placeholder/400/400"
-                alt="Fashion Retouching Example"
-                class="portfolio-image img-fluid"
-              />
-              <div class="portfolio-overlay">
-                <h3>High Fashion Editorial</h3>
-                <p>Magazine-quality retouching with attention to details</p>
-                <div class="portfolio-buttons">
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-search"></i>
-                  </a>
-                </div>
+            <img
+              src="/api/placeholder/400/400"
+              alt="Fashion Retouching Example"
+              class="portfolio-image"
+            />
+            <div class="portfolio-overlay">
+              <h3>High Fashion Editorial</h3>
+              <p>Magazine-quality retouching with attention to details</p>
+              <div class="portfolio-buttons">
+                <a href="#" class="portfolio-btn">
+                  <i class="fas fa-link"></i>
+                </a>
+                <a href="#" class="portfolio-btn">
+                  <i class="fas fa-search"></i>
+                </a>
               </div>
             </div>
           </div>
           <div
-            class="col-md-6 col-lg-4 portfolio-item invisible animate__animated animate__fadeInUp"
-            style="animation-delay: 0.6s"
+            class="portfolio-item animate__animated animate__fadeInUp"
             data-category="realestate"
+            style="animation-delay: 0.6s"
           >
-            <div class="position-relative h-100">
-              <img
-                src="/api/placeholder/400/400"
-                alt="Real Estate Retouching Example"
-                class="portfolio-image img-fluid"
-              />
-              <div class="portfolio-overlay">
-                <h3>Real Estate Enhancement</h3>
-                <p>Sky replacement and perspective correction</p>
-                <div class="portfolio-buttons">
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-search"></i>
-                  </a>
-                </div>
+            <img
+              src="/api/placeholder/400/400"
+              alt="Real Estate Retouching Example"
+              class="portfolio-image"
+            />
+            <div class="portfolio-overlay">
+              <h3>Real Estate Enhancement</h3>
+              <p>Sky replacement and perspective correction</p>
+              <div class="portfolio-buttons">
+                <a href="#" class="portfolio-btn">
+                  <i class="fas fa-link"></i>
+                </a>
+                <a href="#" class="portfolio-btn">
+                  <i class="fas fa-search"></i>
+                </a>
               </div>
             </div>
           </div>
           <div
-            class="col-md-6 col-lg-4 portfolio-item invisible animate__animated animate__fadeInUp"
-            style="animation-delay: 0.8s"
+            class="portfolio-item animate__animated animate__fadeInUp"
             data-category="portrait"
+            style="animation-delay: 0.8s"
           >
-            <div class="position-relative h-100">
-              <img
-                src="/api/placeholder/400/400"
-                alt="Beauty Retouching Example"
-                class="portfolio-image img-fluid"
-              />
-              <div class="portfolio-overlay">
-                <h3>Beauty Retouching</h3>
-                <p>Professional beauty image enhancement</p>
-                <div class="portfolio-buttons">
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-search"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md-6 col-lg-4 portfolio-item invisible animate__animated animate__fadeInUp"
-            style="animation-delay: 1s"
-            data-category="product"
-          >
-            <div class="position-relative h-100">
-              <img
-                src="/api/placeholder/400/400"
-                alt="Product Catalog Example"
-                class="portfolio-image img-fluid"
-              />
-              <div class="portfolio-overlay">
-                <h3>Product Catalog</h3>
-                <p>Consistent product photography for catalog and e-commerce</p>
-                <div class="portfolio-buttons">
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="#" class="portfolio-btn">
-                    <i class="fas fa-search"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="animate__animated animate__fadeIn reveal">
-            Client Testimonials
-          </h2>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div
-              class="testimonial-card invisible animate__animated animate__fadeInUp"
-            >
-              <div class="client-image">
-                <img src="/api/placeholder/150/150" alt="Client Portrait" />
-              </div>
-              <p class="testimonial-text">
-                "The attention to detail is remarkable. PixelPerfect transformed
-                our product photography and helped increase our online sales by
-                30%. Their understanding of what makes an image sell is
-                unmatched."
-              </p>
-              <h4 class="client-name">Sarah Johnson</h4>
-              <p class="client-role">Marketing Director, StyleBrand</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div
-              class="testimonial-card invisible animate__animated animate__fadeInUp"
-              style="animation-delay: 0.3s"
-            >
-              <div class="client-image">
-                <img src="/api/placeholder/150/150" alt="Client Portrait" />
-              </div>
-              <p class="testimonial-text">
-                "As a professional photographer, I'm extremely particular about
-                who touches my work. The team at PixelPerfect understands my
-                aesthetic and enhances my photos while maintaining my signature
-                style."
-              </p>
-              <h4 class="client-name">Michael Torres</h4>
-              <p class="client-role">Fashion Photographer</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div
-              class="testimonial-card invisible animate__animated animate__fadeInUp"
-              style="animation-delay: 0.6s"
-            >
-              <div class="client-image">
-                <img src="/api/placeholder/150/150" alt="Client Portrait" />
-              </div>
-              <p class="testimonial-text">
-                "Our real estate listings look absolutely stunning after
-                PixelPerfect's enhancement. The sky replacements and interior
-                touch-ups make every property look its best, helping us close
-                deals faster."
-              </p>
-              <h4 class="client-name">Emily Roberts</h4>
-              <p class="client-role">Real Estate Agent, Luxury Homes</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="animate__animated animate__fadeIn reveal">Get In Touch</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-5 mb-5 mb-lg-0">
-            <div
-              class="contact-info invisible animate__animated animate__fadeInLeft"
-            >
-              <h3 class="mb-4">Let's Discuss Your Project</h3>
-              <div class="contact-details mb-4">
-                <div class="d-flex mb-4"></div>
+            <img
+              src="/api/placeholder/400/400"
+              alt="Beauty Retouching Example"
+              class="portfolio-image"
+            />
+            <div class="portfolio-overlay">
+              <h3>Beauty Retouching</h3>
+              <p>Professional beauty image enhancement</p>
+              <div class="portfolio-buttons">
+                <a href="#" class="portfolio-btn">
+                  <i class="fas fa-link"></i>
+                </a>
               </div>
             </div>
           </div>

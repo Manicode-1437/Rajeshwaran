@@ -1,3 +1,8 @@
+@font-face {
+  font-family: TwoWeeks;
+  src: url("../assets/fonts/twoweekendssans-regular.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +24,8 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
   color: var(--bs-dark) !important;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1,
@@ -38,23 +43,23 @@ h6 {
   color: var(--bs-light);
 }
 
-.nav-link {
+.underline {
   position: relative;
   font-weight: 500;
 }
 
-.nav-link::after {
+.underline::after {
   content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--bs-red);
+  background-color: var(--bs-primary);
   transition: all 0.3s ease;
 }
 
-.nav-link:hover::after {
+.underline:hover::after {
   width: 100%;
 }
 
@@ -82,7 +87,7 @@ h6 {
 
 .hero {
   height: 92.7vh;
-  background: url(../assets/images/heroimge.jpg) center/cover no-repeat,
+  background: url(../assets/images/hero.jpg) center/cover no-repeat,
     linear-gradient(rgba(34, 40, 49, 0.7), rgba(34, 40, 49, 0.7));
   display: flex;
   align-items: center;
@@ -107,10 +112,50 @@ section {
   padding: 5rem 0;
 }
 
-/* #home {
-  height: 93vh;
-  background: url(../assets/images/heroimg1.jpg) no-repeat;
-  background-size: contain;
-  width: 100%;
-  border: 2px solid black;
-} */
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--bs-primary);
+}
+
+.card {
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 5px 5px 10px #c4c4c4, -5px -5px 10px #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-2%);
+}
+
+.carousel-item {
+  background-color: var(--bs-dark);
+}
+
+.backdrop {
+  height: 3px;
+  background-color: var(--bs-primary);
+  width: 100%; /* Full width */
+}
+
+.img {
+  height: 720px;
+  object-fit: contain;
+}
