@@ -1,8 +1,3 @@
-@font-face {
-  font-family: TwoWeeks;
-  src: url("../assets/fonts/twoweekendssans-regular.otf");
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -19,13 +14,14 @@
   --bs-light-rgb: 238, 238, 238;
   --bs-red: #d84040;
   --bs-red-rgb: 216, 64, 64;
+  --transition: all 0.3s ease;
 }
 
 body {
   padding: 0;
   margin: 0;
   color: var(--bs-dark) !important;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", helvetica, sans-serif;
 }
 
 h1,
@@ -158,4 +154,26 @@ section {
 .img {
   height: 720px;
   object-fit: contain;
+}
+
+.portfolio-item {
+  padding: 5px 5px;
+  border-radius: 8px;
+  height: 400px;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: var(--transition);
+}
+
+.coroitem {
+  background: transparent !important;
+}
+
+.coroimg {
+  height: 91.7vh;
 }

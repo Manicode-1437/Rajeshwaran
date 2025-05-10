@@ -99,10 +99,10 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="container">
-        <div
-          class="hero-content animate__animate animate__fadeInUp animate__delay-2s"
-        >
-          <h1>Transform Your Images with Professional Retouching</h1>
+        <div class="hero-content">
+          <h1 class="animate__animated animate__fadeInDown">
+            Transform Your Images with Professional Retouching
+          </h1>
           <p class="my-4">
             Elevate your visual content with expert photo retouching services
             tailored to your specific needs. From portrait enhancement to
@@ -124,44 +124,63 @@
         </div>
       </div>
     </section>
+    <!-- for line -->
     <div class="backdrop"></div>
     <!-- Corousel Section for default images -->
     <div id="images" class="shadow-lg">
-      <div class="row">
-        <div class="col">
-          <div class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="./assets/images/ARROW42972.jpg"
-                  alt="portfolio-images-1"
-                  class="d-block w-100 img"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/cult-Shoe-Campaign-1375.jpg"
-                  alt="cutlshoe-1"
-                  class="d-block w-100 img"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/cult-Shoe-Campaign-1608-(1).jpg"
-                  alt="clutshoe-2"
-                  class="d-block img w-100"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="./assets/images/MAXAW5003-F.jpg"
-                  alt="Maxa"
-                  class="d-block img w-100"
-                />
-              </div>
-            </div>
+      <div
+        id="move"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./assets/images/ARROW42972.jpg"
+              alt="portfolio-images-1"
+              class="d-block w-100 img"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/images/cult-Shoe-Campaign-1375.jpg"
+              alt="cutlshoe-1"
+              class="d-block w-100 img"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/images/cult-Shoe-Campaign-1608-(1).jpg"
+              alt="clutshoe-2"
+              class="d-block w-100 img"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/images/MAXAW5003-F.jpg"
+              alt="Maxa"
+              class="d-block w-100 img"
+            />
           </div>
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#move"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#move"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
     <div class="backdrop"></div>
@@ -173,8 +192,8 @@
             Services Provided
           </h2>
         </div>
-        <div class="row my-3">
-          <div class="col-3">
+        <div class="row my-1">
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-1">
             <div class="card p-2">
               <div class="card-header bg-transparent fs-5">
                 Photo Retouching
@@ -190,7 +209,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-1">
             <div class="card p-2">
               <div class="card-header bg-transparent fs-5">
                 Image Enhancement
@@ -206,7 +225,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-1">
             <div class="card p-2">
               <div class="card-header bg-transparent fs-5">
                 Real Estate Image Editing
@@ -222,7 +241,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-1">
             <div class="card p-2">
               <div class="card-header bg-transparent fs-5">Cliping path</div>
               <div class="card-body fs-6">
@@ -236,7 +255,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-3">
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-1">
             <div class="card p-2">
               <div class="card-header bg-transparent fs-5">
                 Colour Correction
@@ -252,7 +271,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-1">
             <div class="card p-2">
               <div class="card-header bg-transparent fs-5">
                 Image Restoration
@@ -268,7 +287,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-1">
             <div class="card p-2">
               <div class="card-header bg-transparent fs-5">
                 Photo Manipulation
@@ -284,7 +303,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-1">
             <div class="card p-2">
               <div class="card-header bg-transparent fs-5">Product Editing</div>
               <div class="card-body fs-6">
@@ -304,16 +323,1809 @@
     <section id="portfolio">
       <div class="container">
         <div class="section-title">
-          <h2 class="animate__animated animate__fadeIn reveal">Portfolio</h2>
+          <h2 class="animate__animated animate__fadeIn">Portfolio</h2>
         </div>
-        <div class="row">
-          <div
-            class="col-md-4 col-lg-4 invisible animate__animated animate__fadeInUp"
-          >
-            <div class="portfolio-item"></div>
+        <!-- campaign-image starts here -->
+        <div class="row m-3">
+          <div class="col-12">
+            <div class="subheading">
+              <h4 class="fs-2">Campaign Images</h4>
+              <hr />
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div class="row">
+                  <div class="col-12">
+                    <div
+                      class="card border border-1 shadow shadow-lg portfolio-item"
+                      data-bs-toggle="modal"
+                      data-bs-target="#campaign1"
+                    >
+                      <img
+                        src="./assets/images/1_Campaign_images/Campaign Images/22_main.jpg"
+                        alt="campaign-1"
+                        class="portfolio-image"
+                      />
+                      <div class="d-grid">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-primary rounded-pill m-2"
+                        >
+                          View More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div class="row">
+                  <div class="col-12">
+                    <div
+                      class="card border border-1 shadow shadow-lg portfolio-item"
+                      data-bs-toggle="modal"
+                      data-bs-target="#campaign2"
+                    >
+                      <img
+                        src="./assets//images/1_Campaign_images/Campaign Images copy/BEACH-10873_main.jpg"
+                        alt="campaign-2"
+                        class="portfolio-image"
+                      />
+                      <div class="d-grid">
+                        <button
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#campaign2"
+                          class="btn btn-sm btn-primary rounded-pill m-2"
+                        >
+                          View More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div class="row">
+                  <div class="col-12">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-target="#campaign3"
+                      class="card border border-1 shadow-lg shadow portfolio-item"
+                    >
+                      <img
+                        src="./assets/images/1_Campaign_images/Campaign Images copy 2/LOOK 5-0706 copy_main.jpg"
+                        alt="campaign3"
+                        class="portfolio-image"
+                      />
+                      <div class="d-grid">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-primary rounded-pill m-2"
+                          data-bs-toggle="modal"
+                          data-bs-target="#campaign3"
+                        >
+                          View More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div class="row">
+                  <div class="col-12">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-target="#campaign4"
+                      class="card border border-1 shadow shadow-lg portfolio-item"
+                    >
+                      <img
+                        src="./assets/images/1_Campaign_images/Campaign Images copy 3/-2372_main.jpg"
+                        alt="campaign-4"
+                        class="portfolio-image"
+                      />
+                      <div class="d-grid">
+                        <button
+                          data-bs-toggle="modal"
+                          data-bs-target="#campaign4"
+                          type="button"
+                          class="btn btn-sm btn-primary rounded-pill m-2"
+                        >
+                          View More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div class="row">
+                  <div class="col-12">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-target="#campaign5"
+                      class="card border border-1 shadow shadow-lg portfolio-item"
+                    >
+                      <img
+                        src="./assets/images/1_Campaign_images/Campaign Images copy 4/EOSS-1229-1 copy (1)_main.jpg"
+                        alt="campaign-4"
+                        class="portfolio-image"
+                      />
+                      <div class="d-grid">
+                        <button
+                          data-bs-toggle="modal"
+                          data-bs-target="#campaign5"
+                          type="button"
+                          class="btn btn-sm btn-primary rounded-pill m-2"
+                        >
+                          View More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div class="row">
+                  <div class="col-12">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-target="#campaign6"
+                      class="card border border-1 shadow shadow-lg portfolio-item"
+                    >
+                      <img
+                        src="./assets/images/1_Campaign_images/Campaign images 5/6_main.jpg"
+                        alt="campaign-6"
+                        class="portfolio-image"
+                      />
+                      <div class="d-grid">
+                        <button
+                          data-bs-toggle="modal"
+                          data-bs-target="#campaign6"
+                          type="button"
+                          class="btn btn-sm btn-primary rounded-pill m-2"
+                        >
+                          View More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- campaign-image ends here -->
+        <!-- creative-image starts here -->
+        <div class="row m-3">
+          <div class="col-12">
+            <div class="subheading">
+              <h4 class="fs-2">Creative Images</h4>
+              <hr />
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#creative1"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder/1-0123_1_main.jpg"
+                    alt="creative-1"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#creative1"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#creative2"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder 2/25-1164_main.jpg"
+                    alt="creative-2"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#creative2"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#creative3"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder 3/601301-2135-main.jpg"
+                    alt="creative-3"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#creative3"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-12">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-6 col-md-3 col-sm-12 col-xs-12 my-1">
+                    <div class="row">
+                      <div class="col-12">
+                        <div
+                          data-bs-toggle="modal"
+                          data-bs-target="#creative4"
+                          class="card shadow shadow-lg portfolio-item"
+                        >
+                          <img
+                            src="./assets/images/2_Creative_images/untitled folder 4/_main.jpg"
+                            alt="creative-4"
+                            class="portfolio-image"
+                          />
+                          <div class="d-grid">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-primary rounded-pill m-2"
+                            >
+                              View More
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-3 col-sm-12 col-xs-12 my-1">
+                    <div class="row">
+                      <div class="col-12">
+                        <div
+                          data-bs-toggle="modal"
+                          data-bs-target="#creative5"
+                          class="card shadow shadow-lg portfolio-item"
+                        >
+                          <img
+                            src="./assets/images/2_Creative_images/untitled folder 5/24.10 Bewakoof Creative-1437_main.jpg"
+                            alt="creative-5"
+                            class="portfolio-image"
+                          />
+                          <div class="d-grid">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-primary rounded-pill m-2"
+                            >
+                              View More
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- creative-image ends here -->
+        <div class="row m-3">
+          <div class="col-12">
+            <div class="subheading">
+              <h4 class="fs-2">Catalog Images</h4>
+              <hr />
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#catalog1"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/3_Catalog_images/untitled folder/35-1320_main.jpg"
+                    alt="catalog-1"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#catalog1"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#catalog2"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/3_Catalog_images/untitled folder 2/20-2147_main.jpg"
+                    alt="catalog-2"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#catalog2"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#catalog3"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/3_Catalog_images/untitled folder 3/704842-6370_main.jpg"
+                    alt="catalog-3"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#catalog3"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#catalog4"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/3_Catalog_images/untitled folder 4/black leggings-0702_main.jpg"
+                    alt="catalog-4"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#catalog4"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- creative-image ends here -->
+        <!-- creative-product image starts here -->
+        <div class="row m-3">
+          <div class="col-12">
+            <div class="subheading">
+              <h4 class="fs-2">Creative Product Images</h4>
+              <hr />
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#creativeproduct-1"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/4_Creative_Product_images/creative-product-1/700176-0443_main.jpg"
+                    alt="creativeproduct1"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#creativeproduct-1"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#creativeproduct-2"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/4_Creative_Product_images/creative-product-2/28th Sept Boldfit Product-0169_main.jpg"
+                    alt="creativeproduct2"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#creativeproduct-2"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#creativeproduct-3"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/4_Creative_Product_images/creative-product-3/02nd september cult-0153_main.jpg"
+                    alt="creativeproduct3"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#creativeproduct-3"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#creativeproduct4"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/4_Creative_Product_images/creative-product-4/shoes-0797_main.jpg"
+                    alt="creativeproduct4"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#creativeproduct-4"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- creative-product image ends here -->
+        <!-- ecommerce image starts here -->
+        <div class="row m-3">
+          <div class="col-12">
+            <div class="subheading">
+              <h4 class="fs-2">E-Commerce On Model</h4>
+              <hr />
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-model-1"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/5_E-comm_images on_model/untitled folder/03-2899_main.jpg"
+                    alt="ecom-model-1"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-model-1"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-model-2"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/5_E-comm_images on_model/untitled folder 2/05-4104_main.jpg"
+                    alt="ecom-model-2"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-model-2"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-model-3"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/5_E-comm_images on_model/untitled folder 3/C3P10062_main.jpg"
+                    alt="ecom-model-3"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-model-3"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-model-4"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/5_E-comm_images on_model/untitled folder 4/Sports Bra  Black-4061_main.jpg"
+                    alt="ecom-model-4"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-model-4"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ecommerce model image ends here -->
+        <div class="row m-3">
+          <div class="col-12">
+            <div class="subheading">
+              <h4 class="fs-2">E-Commerce Product</h4>
+              <hr />
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-prod-1"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/6_E-comm_product_images/untitled folder/2-2864_main.jpg"
+                    alt="e-com-prod-1"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-prod-1"
+                      type="button"
+                      class="btn btn-sm btn-primary m-2 rounded-pill"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-prod-2"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/6_E-comm_product_images/untitled folder 2/60L- Black-0233_main.jpg"
+                    alt="e-com-prod-2"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-prod-2"
+                      type="button"
+                      class="btn btn-sm btn-primary m-2 rounded-pill"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-prod-3"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/6_E-comm_product_images/untitled folder 3/Beige - L-5280_1_main.jpg"
+                    alt="e-com-prod-3"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-prod-3"
+                      type="button"
+                      class="btn btn-sm btn-primary m-2 rounded-pill"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-prod-4"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/6_E-comm_product_images/untitled folder 4/black-0848_main.jpg"
+                    alt="e-com-prod-4"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-prod-4"
+                      type="button"
+                      class="btn btn-sm btn-primary m-2 rounded-pill"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-prod-5"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/6_E-comm_product_images/untitled folder 5/Blue Waist Bag-0033_main.jpg"
+                    alt="e-com-prod-5"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-prod-5"
+                      type="button"
+                      class="btn btn-sm btn-primary m-2 rounded-pill"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-1">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-prod-6"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/6_E-comm_product_images/untitled folder 6/RED CAP A-5589_main.jpg"
+                    alt="e-com-prod-6"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-prod-6"
+                      type="button"
+                      class="btn btn-sm btn-primary m-2 rounded-pill"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ecommerce product image ends here -->
+        <!-- ecom premium image starts here -->
+        <div class="row m-3">
+          <div class="col-12">
+            <div class="subheading">
+              <h2 class="fs-2">E-Commerce Premium Images</h2>
+              <hr />
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-premium-1"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/8_Premium_E-comm_images/untitled folder/2-6622_main.jpg"
+                    alt="e-com-premium-1"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-premium-1"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-premium-2"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/8_Premium_E-comm_images/untitled folder 2/15-4782_main.jpg"
+                    alt="e-com-premmium-2"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-premium-2"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-premium-3"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/8_Premium_E-comm_images/untitled folder 3/10-8657_main.jpg"
+                    alt="e-com-premium-3"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-premium-3"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-1">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-premium-4"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/8_Premium_E-comm_images/untitled folder 4/RFBT-72191-D_main.jpg"
+                    alt="e-com-premium-4"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-premium-4"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-premium-5"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/8_Premium_E-comm_images/untitled folder 5/black tracks_main.jpg"
+                    alt="e-com-premium-5"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-premium-5"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#ecom-premium-6"
+                  class="card shadow shadow-lg portfolio-item"
+                >
+                  <img
+                    src="./assets/images/8_Premium_E-comm_images/untitled folder 6/black vest_main.jpg"
+                    alt="e-com-premium-6"
+                    class="portfolio-image"
+                  />
+                  <div class="d-grid">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#ecom-premium-6"
+                      type="button"
+                      class="btn btn-sm btn-primary rounded-pill m-2"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ecom premium image ends here -->
+        <!-- mannequin image and skin retouch and before after works -->
+        <!-- skin retouch -->
+        <div class="row m-3">
+          <div class="col-12">
+            <div class="subheading">
+              <h2 class="fs-2">Skin Retouch Images</h2>
+              <hr />
+            </div>
+            <div class="row-my-1">
+              <div class="col-12">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-target="#skinretouch"
+                      class="card shadow shadow-lg portfolio-item"
+                    >
+                      <img
+                        src="./assets/images/6A_Skin_retouch/2nd Oct Aqualens_main.jpg"
+                        alt="skin-retouch"
+                        class="portfolio-image"
+                      />
+                      <div class="d-grid">
+                        <button
+                          data-bs-toggle="modal"
+                          data-bs-target="#skinretouch"
+                          type="button"
+                          class="btn btn-sm btn-primary rounded-pill m-2"
+                        >
+                          View More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- skin-retouch-ends here -->
+        <!-- mannequin images here -->
+        <div class="row m-3">
+          <div class="col-12">
+            <div class="subheading">
+              <h2 class="fs-2">Mannequin Images</h2>
+              <hr />
+            </div>
+            <div class="row my-1">
+              <div class="col-12">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 my-1">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-target="#mannequin"
+                      class="card portfolio-item shadow shadow-lg"
+                    >
+                      <img
+                        src="./assets/images/7_Mannequin_images/Boys Swim Suit 1-4175_main.jpg"
+                        alt="mannequin"
+                        class="portfolio-image"
+                      />
+                      <div class="d-grid">
+                        <button
+                          data-bs-toggle="modal"
+                          data-bs-target="#mannequin"
+                          type="button"
+                          class="btn btn-sm btn-primary rounded-pill m-2"
+                        >
+                          View More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- mannequin images ends here -->
+        <!-- Saree Images starts here -->
+        <div class="row m-3">
+          <div class="col-12">
+            <div class="subheading">
+              <h2 class="fs-2">Saree Images</h2>
+              <hr />
+            </div>
+            <div class="row my-1">
+              <div class="col-12">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-target="#saree"
+                      class="card shadow shadow-lg portfolio-item"
+                    >
+                      <img
+                        src="./assets/images/9_Saree_images/SABFDGHSS0101-3430.jpg"
+                        alt=""
+                        class="portfolio-image"
+                      />
+                      <div class="d-grid">
+                        <button
+                          data-bs-toggle="modal"
+                          data-bs-target="#saree"
+                          type="button"
+                          class="btn btn-sm btn-primary m-2 rounded-pill"
+                        >
+                          View More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Saree Images ends here -->
+        <!-- before after image here -->
+        <div class="row m-3">
+          <div class="col-12">
+            <div class="subheading">
+              <h2 class="fs-2">Before/After Images</h2>
+              <hr />
+            </div>
+            <div class="row my-1">
+              <div class="col-12">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                    <div
+                      data-bs-toggle="modal"
+                      data-bs-target="#beforeafter"
+                      class="card shadow shadow-lg portfolio-item"
+                    >
+                      <img
+                        src="./assets/images/Before_and_after_works/Before and After/2_After.jpg"
+                        alt=""
+                        class="portfolio-image"
+                      />
+                      <div class="d-grid">
+                        <button
+                          data-bs-toggle="modal"
+                          data-bs-target="#beforeafter"
+                          type="button"
+                          class="btn btn-sm btn-primary m-2 rounded-pill"
+                        >
+                          View More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- before after image ends  here -->
+        <!-- mannequin images and skin retouch and before after works ends here -->
+      </div>
+    </section>
+    <!-- campaign 1 modal -->
+    <div class="modal" id="campaign1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content bg-transparent">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body border-0 bg-transparent">
+            <div id="carocampaign1" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item coroitem active">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images/1 3.jpg"
+                    alt="campaign2"
+                    class="coroimg d-block mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images/1.jpg"
+                    alt="campaign2"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images/11.jpg"
+                    alt="campaign3"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carocampaign1"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carocampaign1"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <!-- campaign 1 modal ends here -->
+    <!-- campaign 2 modal starts here -->
+    <div class="modal" id="campaign2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content bg-transparent">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body border-0 bg-transparent">
+            <div id="carocampaign-2" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item coroitem active">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy/BEACH-10669.jpg"
+                    alt="campaign-2(1)"
+                    class="coroimg d-block mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy/BEACH-10670.jpg"
+                    alt="campaign-2(2)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy/BEACH-10706.jpg"
+                    alt="campaign-2(3)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy/BEACH-11026_.jpg"
+                    alt="campaign-2(4)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carocampaign-2"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carocampaign-2"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- campaign 2 modal ends here -->
+    <!-- campaign 3 modal starts here -->
+    <div class="modal" id="campaign3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content bg-transparent">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body border-0 bg-transparent">
+            <div id="carocampaign-3" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item coroitem active">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy 2/LOOK 1-5250_Final copy.jpg"
+                    alt="campaign-3(1)"
+                    class="coroimg d-block mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy 2/LOOK 2-0143 copy.jpg"
+                    alt="campaign-3(2)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy 2/LOOK 2-0154 copy.jpg"
+                    alt="campaign-3(3)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carocampaign-3"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carocampaign-3"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- campaign 3 modal ends here -->
+    <!-- campaign 4 modal starts here -->
+    <div class="modal" id="campaign4" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content bg-transparent">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body border-0 bg-transparent">
+            <div id="carocampaign-4" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item coroitem active">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy 3/-2294.jpg"
+                    alt="campaign-4(1)"
+                    class="coroimg d-block mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy 3/-2423.jpg"
+                    alt="campaign-4(2)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy 3/-2469.jpg"
+                    alt="campaign-4(3)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carocampaign-4"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carocampaign-4"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- campaign 4 modal ends here -->
+    <!-- campaign 5 modal starts here -->
+    <div class="modal" id="campaign5" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content bg-transparent">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body border-0 bg-transparent">
+            <div id="carocampaign-5" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item coroitem active">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy 4/BIRTHDAY BASH-0078_Final.jpg"
+                    alt="campaign-5(1)"
+                    class="coroimg d-block mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy 4/SHIRT AND TROUSERS-1112-1_Final.jpg"
+                    alt="campaign-5(2)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign Images copy 4/WEEKEND SALE-0974-1_Final.jpg"
+                    alt="campaign-5(3)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carocampaign-5"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carocampaign-5"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- campaign 5 modal ends here -->
+    <!-- campaign 6 modal starts here -->
+    <div class="modal" id="campaign6" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content bg-transparent">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body border-0 bg-transparent">
+            <div id="carocampaign-6" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item coroitem active">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign images 5/1.jpg"
+                    alt="campaign-6(1)"
+                    class="coroimg d-block mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign images 5/2.jpg"
+                    alt="campaign-6(2)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign images 5/3.jpg"
+                    alt="campaign-6(3)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign images 5/4.jpg"
+                    alt="campaign-6(3)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign images 5/5.jpg"
+                    alt="campaign-6(3)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/1_Campaign_images/Campaign images 5/6_main.jpg"
+                    alt="campaign-6(3)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carocampaign-6"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carocampaign-6"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- campaign 6 modal ends here -->
+    <!-- creative 1 modal starts here -->
+    <div class="modal" id="creative1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content bg-transparent">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body border-0 bg-transparent">
+            <div id="creative-1" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item coroitem active">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder/14-0524.jpg"
+                    alt="creative-1(1)"
+                    class="coroimg d-block mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder/25-1036.jpg"
+                    alt="creative-1(2)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder/26-1062.jpg"
+                    alt="creative-1(3)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder/29-1154.jpg"
+                    alt="creative-1(4)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder/8-0360.jpg"
+                    alt="creative-1(5)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#creative-1"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#creative-1"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- creative 1 modal ends here -->
+    <!-- creative 2 modal starts here -->
+    <div class="modal" id="creative2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content bg-transparent">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body border-0 bg-transparent">
+            <div id="creative-2" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item coroitem active">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder 2/06-0263 copy.jpg"
+                    alt="creative-2(1)"
+                    class="coroimg d-block mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder 2/20-0938.jpg"
+                    alt="creative-2(2)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder 2/26-1233.jpg"
+                    alt="creative-2(3)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder 2/27-1287.jpg"
+                    alt="creative-2(4)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#creative-2"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#creative-2"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- creative 2 modal ends here -->
+    <!-- creative 3 modal starts here -->
+    <div class="modal" id="creative3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content bg-transparent">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body border-0 bg-transparent">
+            <div id="creative-3" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item coroitem active">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder 3/-2570.jpg"
+                    alt="creative-3(1)"
+                    class="coroimg d-block mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder 3/601297-2097-copy.jpg"
+                    alt="creative-3(2)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder 3/green chugger-1028.jpg"
+                    alt="creative-3(3)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+                <div class="carousel-item coroitem">
+                  <img
+                    src="./assets/images/2_Creative_images/untitled folder 3/Limitless Mint Blue-0376.jpg"
+                    alt="creative-3(4)"
+                    class="d-block coroimg mx-auto"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#creative-3"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#creative-3"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- creative 3 modal ends here -->
+    <!-- creative 4 modal starts here -->
+    <!-- creative 4 modal ends here -->
+    <!-- creative 5 modal starts here -->
+    <!-- creative 5 modal ends here -->
+    <!-- catalog 1 modal starts here -->
+    <!-- catalog 1 modal ends here  -->
+    <!-- catalog 2 modal starts here -->
+    <!-- catalog 2 modal ends here -->
+    <!-- catalog 3 modal starts here -->
+    <!-- catalog 3 modal ends here -->
+    <!-- catalog 4 modal starts here -->
+    <!-- catalog 4 modal ends here -->
+    <!-- creativeproduct1 modal starts here -->
+    <!-- creativeproduct1 modal ends here -->
+    <!-- createproduct2 modal starts here -->
+    <!-- creative product 2 modal ends  here -->
+    <!-- creative product 3 modal starts here -->
+    <!-- creative product 3 modal ends here -->
+    <!-- creative product 4 modal starts here -->
+    <!-- creative product 4 modal ends here -->
+    <!-- ecommerce model 1 modal starts here -->
+    <!-- ecommerce model 1 modal ends here -->
+    <!-- ecommerce model 2 modal starts here -->
+    <!-- ecommerce model 2 modal ends here -->
+    <!-- ecommerce model 3 modal starts here -->
+    <!-- ecommerce model 3 modal ends here -->
+    <!-- ecommerce model 4 modal starts here -->
+    <!-- ecommerce model 4 modal ends here -->
+    <!-- ecommerce product 1 modal start here -->
+    <!-- ecommerce product 1 modal endshere -->
+    <!-- ecommerce product 2 modal start here -->
+    <!-- ecommerce product 2 modal endshere -->
+    <!-- ecommerce product 3 modal start here -->
+    <!-- ecommerce product 3 modal endshere -->
+    <!-- ecommerce product 4 modal start here -->
+    <!-- ecommerce product 4 modal endshere -->
+    <!-- ecommerce product 5 modal start here -->
+    <!-- ecommerce product 5 modal endshere -->
+    <!-- ecommerce product 6 modal start here -->
+    <!-- ecommerce product 6 modal endshere -->
+    <!-- ecommerce premium-1 modal starts here -->
+    <!-- ecommerce premium-1 modal ends here -->
+    <!-- ecommerce premium-2 modal starts here -->
+    <!-- ecommerce premium-2 modal ends here -->
+    <!-- ecommerce premium-3 modal starts here -->
+    <!-- ecommerce premium-3 modal ends here -->
+    <!-- ecommerce premium-4 modal starts here -->
+    <!-- ecommerce premium-4 modal ends here -->
+    <!-- ecommerce premium-5 modal starts here -->
+    <!-- ecommerce premium-5 modal ends here -->
+    <!-- ecommerce premium-6 modal starts here -->
+    <!-- ecommerce premium-6 modal ends here -->
   </body>
 </html>
