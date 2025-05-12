@@ -175,6 +175,8 @@ section {
 
 .coroimg {
   height: 91.7vh;
+  width: 70%;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 768px) {
