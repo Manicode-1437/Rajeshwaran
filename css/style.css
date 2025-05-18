@@ -22,6 +22,7 @@ body {
   margin: 0;
   color: var(--bs-dark) !important;
   font-family: Helvetica, sans-serif;
+  background-color: aliceblue;
 }
 
 h1,
@@ -156,12 +157,6 @@ section {
   object-fit: contain;
 }
 
-.portfolio-item {
-  padding: 5px 5px;
-  border-radius: 8px;
-  height: 400px;
-}
-
 .portfolio-image {
   width: 100%;
   height: 100%;
@@ -217,4 +212,55 @@ section {
 .contact-text h4 {
   margin-bottom: 0.2rem;
   font-size: 1.1rem;
+}
+
+.thumbnail {
+  position: relative;
+  height: 320px;
+  width: 100%;
+  background: mediumturquoise;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.thumbnail::before,
+.thumbnail::after {
+  position: absolute;
+  content: "";
+  width: 15%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: lightblue;
+  transition: all 0.5s;
+}
+
+.thumbnail::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.thumbnail::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 15px;
+}
+
+.thumbnail:hover::before,
+.thumbnail:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.thumbnail:hover:after {
+  content: "View More";
 }
